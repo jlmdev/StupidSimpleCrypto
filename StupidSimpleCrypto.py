@@ -10,20 +10,16 @@ def simple_encrypt():
 
 
 def simple_decrypt():
-    # input number
     cypher = input('Cypher? :')
-    # check if even or odd length
     if len(cypher) % 2 != 0:
-        # if odd add a leading 0
         cypher = '0' + cypher
-
-    # split list into 2 digit integers
-    cypher_list = []
-    for
-    # convert each integer to a corresponding letter
-    # print result
-
-
+    cypher_list = [int(cypher[index:index + 2]) for index in range(0, len(cypher), 2)]
+    letter_list = []
+    for code in cypher_list:
+        letter_list.append(chr(code + ord('a') - 1))
+    print(cypher_list)
+    word = ''
+    print(word.join(letter_list))
 
 
 def main():
